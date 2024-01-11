@@ -8,33 +8,25 @@ class User {
    * Устанавливает текущего пользователя в
    * локальном хранилище.
    * */
-  static setCurrent(user) {
-
-  }
+  static setCurrent(user) {}
 
   /**
    * Удаляет информацию об авторизованном
    * пользователе из локального хранилища.
    * */
-  static unsetCurrent() {
-
-  }
+  static unsetCurrent() {}
 
   /**
    * Возвращает текущего авторизованного пользователя
    * из локального хранилища
    * */
-  static current() {
-
-  }
+  static current() {}
 
   /**
    * Получает информацию о текущем
    * авторизованном пользователе.
    * */
-  static fetch(callback) {
-
-  }
+  static fetch(callback) {}
 
   /**
    * Производит попытку авторизации.
@@ -44,16 +36,16 @@ class User {
    * */
   static login(data, callback) {
     createRequest({
-      url: this.URL + '/login',
-      method: 'POST',
-      responseType: 'json',
+      url: this.URL + "/login",
+      method: "POST",
+      responseType: "json",
       data,
       callback: (err, response) => {
         if (response && response.user) {
           this.setCurrent(response.user);
         }
         callback(err, response);
-      }
+      },
     });
   }
 
@@ -63,15 +55,11 @@ class User {
    * сохранить пользователя через метод
    * User.setCurrent.
    * */
-  static register(data, callback) {
-
-  }
+  static register(data, callback) {}
 
   /**
    * Производит выход из приложения. После успешного
    * выхода необходимо вызвать метод User.unsetCurrent
    * */
-  static logout(callback) {
-
-  }
+  static logout(callback) {}
 }
