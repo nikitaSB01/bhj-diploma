@@ -11,8 +11,12 @@ class Modal {
    * Если переданный элемент не существует,
    * необходимо выкинуть ошибку.
    * */
-  constructor(element){
-
+  constructor(element) {
+    if (!element) {
+      throw new Error("Невалидное значение для AsyncForm");
+    }
+    this.element = element;
+    this.registerEvents();
   }
 
   /**
@@ -21,7 +25,13 @@ class Modal {
    * (с помощью метода Modal.onClose)
    * */
   registerEvents() {
-
+    let arr = Array.from(document.querySelectorAll('[data-dismiss="modal"]'));
+    for (let i = 0; i < arr.length; i++) {
+      arr[i].addEventListener("click", (e) => {
+        e.preventDefault();
+        this.onClose(arr[i]);
+      });
+    }
   }
 
   /**
@@ -29,19 +39,20 @@ class Modal {
    * Закрывает текущее окно (Modal.close())
    * */
   onClose(e) {
-
+    //?     e.onClick = this.close()
+    e.onclick = this.close();
   }
   /**
    * Открывает окно: устанавливает CSS-свойство display
    * со значением «block»
    * */
   open() {
-
+    this.element.style.display = "block";
   }
   /**
    * Закрывает окно: удаляет CSS-свойство display
    * */
-  close(){
-
+  close() {
+    this.element.removeAttribute("style");
   }
 }

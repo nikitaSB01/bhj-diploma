@@ -32,5 +32,13 @@ class Sidebar {
    * При нажатии на кнопку выхода вызывает User.logout и по успешному
    * выходу устанавливает App.setState( 'init' )
    * */
-  static initAuthLinks() {}
+  static initAuthLinks() {
+    /*  let menuItem = document.querySelector(".menu-item_register");
+    let modalRegister = document.querySelector("#modal-register");
+
+    menuItem.addEventListener("click", () => {
+      App.getModal("register");
+      Modal.open(modalRegister);
+    }); */
+  }
 }
