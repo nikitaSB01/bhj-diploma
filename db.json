@@ -5,6 +5,12 @@
       "email": "demo@demo",
       "password": "demo",
       "id": "1"
+    },
+    {
+      "name": "Niki",
+      "email": "halkaster666@mail.ru",
+      "password": "halkaster666@mail.ru",
+      "id": "8nljngiglrhw6ch0"
     }
   ],
   "accounts": [
@@ -22,6 +28,11 @@
       "name": "Бизнес",
       "user_id": "1",
       "id": "3"
+    },
+    {
+      "name": "Сбер",
+      "user_id": "8nljngiglrhw6ch0",
+      "id": "8nljnb8glrhwlwlc"
     }
   ],
   "transactions": [
@@ -159,6 +170,15 @@
       "sum": 300000,
       "type": "expense",
       "user_id": "1"
+    },
+    {
+      "id": "8nljne30lrhwm6fq",
+      "type": "income",
+      "name": "зп",
+      "sum": 55000,
+      "account_id": "8nljnb8glrhwlwlc",
+      "user_id": "8nljngiglrhw6ch0",
+      "created_at": "2024-01-17T14:54:36.565Z"
     }
   ]
 }
