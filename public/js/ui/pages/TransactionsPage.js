@@ -36,7 +36,7 @@ class TransactionsPage {
     const removeBtns = document.querySelector(".content-wrapper");
     removeBtns.addEventListener("click", (e) => {
       e.preventDefault();
-      if (e.target.classList.contains("remove-account")) {
+      if (e.target.classList.contains("remove-account") && User.current()) {
         this.removeAccount();
       } else if (e.target.classList.contains("transaction__remove")) {
         this.removeTransaction(e.target.dataset.id);
