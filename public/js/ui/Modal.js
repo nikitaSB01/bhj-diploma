@@ -39,7 +39,7 @@ class Modal {
    * Закрывает текущее окно (Modal.close())
    * */
   onClose(e) {
-    //?     e.onClick = this.close()
+    //? e.onClick = this.close()
     e.onclick = this.close();
   }
   /**
